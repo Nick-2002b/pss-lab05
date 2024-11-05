@@ -19,13 +19,15 @@ public class Professor implements User{
     }
 
     public void replaceCourse(String cours, int index){
-        
+        if(index < this.courses.length) {
+            this.courses[index] = cours;
+        }
     }
     
     public String[] getCourses(){
         return Arrays.copyOf(this.courses, this.courses.length);
     }
-    
+
     public String getUsername() {
         return this.name + Professor.DOT + this.surname;
     }
