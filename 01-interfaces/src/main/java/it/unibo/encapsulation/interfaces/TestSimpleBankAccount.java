@@ -19,6 +19,8 @@ public class TestSimpleBankAccount {
         // 4) Effettuare una serie di depositi e prelievi
         acc1.deposit(1, 500);
         acc2.deposit(2, 200);
+        acc1.depositFromATM(1, 50);
+        acc1.withdrawFromATM(1, 50);
         
         acc1.withdraw(1, 450);
         acc2.withdraw(2, 250);
@@ -27,10 +29,11 @@ public class TestSimpleBankAccount {
          * 5) Stampare a video l'ammontare dei due conti e verificare la
          * correttezza del risultato
          */
-        System.out.println(acc1.getBalance()); // balance -> 50
+        System.out.println(acc1.getBalance()); // balance -> 49
         System.out.println(acc2.getBalance()); // balance -> -70
         // 6) Provare a prelevare fornendo un id utente sbagliato
-
+        acc1.withdraw(3, 30);
         // 7) Controllare nuovamente l'ammontare
+        System.out.println(acc1.getBalance());
     }
 }
