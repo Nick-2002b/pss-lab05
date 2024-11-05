@@ -95,8 +95,5 @@ public class SimpleBankAccount implements BankAccount {
         /*
          * Riduce il bilancio del conto di un ammontare pari alle spese di gestione
          */
-        if (id == this.id) {
-            this.balance -= ATM_TRANSACTION_FEE;
-        }
     }
 }
