@@ -17,17 +17,17 @@ public class Professor implements User{
 
     
     public String getUsername() {
-        
+        return this.name;
     }
 
     
     public String getPassword() {
-        
+        return this.password;
     }
 
     
     public String getDescription() {
-        
+        return null;
     }
     
 }
