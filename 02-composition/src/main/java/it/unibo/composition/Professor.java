@@ -22,6 +22,10 @@ public class Professor implements User{
         
     }
     
+    public String[] getCourses(){
+        return Arrays.copyOf(this.courses, this.courses.length);
+    }
+    
     public String getUsername() {
         return this.name + Professor.DOT + this.surname;
     }
@@ -40,7 +44,6 @@ public class Professor implements User{
         + "]";
     }
 
-    
     public String getDescription() {
         return this.toString();
     }
